@@ -1,0 +1,66 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--standard-orange);
+}
+
+footer {
+    background-color: var(--standard-orange);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--standard-orange);
+}
+
+.header-and-footer-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.header-and-footer-img {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+main {
+    height: 100vh;
+}
+
+#content-wrapper {
+    display: flex;
+    height: 100%;
+}
+
+#content {
+    width: calc(100% - 300px);
+}
+
+#basket-wrapper {
+    width: 300px;
+    flex-grow: 1;
+    padding: 16px;
+    box-shadow: -5px 0px 4px 1px var(--basket-side-shadow);
+}
+
+#basket {
+    width: 100%;
+    height: 400px;
+    position: sticky;
+    top: 0;
+}
+
+#aot-img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
