@@ -23,10 +23,11 @@ function renderDishObject(dishObject) {
 }
 
 function renderBasketDishObject(dishObject) {
-    let price = dishObject.price.toFixed(2).replace(".", ",");
+    dishObject.orderSum = dishObject.amount * dishObject.price;
+    let price = dishObject.orderSum.toFixed(2).replace(".", ",");
     let retValue = "";
-    // if amount > 0
-    if (true) {
+
+    if (dishObject.amount > 0) {
         retValue = `<div id="basket-dish-object-container${dishObject.id}" class="basket-dish-object-container">
                                 <h3 class="bakset-dish-headline">${dishObject.name}</h3>
                                 <div class="basket-dish-order-container">
@@ -34,7 +35,7 @@ function renderBasketDishObject(dishObject) {
                                         <tr id="basket-tr${dishObject.id}">
                                             <td id="basket-minus${dishObject.id}" class="basket-plus-minus high-minus" onclick="subAmount(dishObject)">&#45</td>
                                             <td id="basket-amount${dishObject.id}">${dishObject.amount}x</td>
-                                            <td id="basket-plus${dishObject.id}" class="basket-plus-minus" onclick="addAmount(dishObject)">&#43</td>
+                                            <td id="basket-plus${dishObject.id}" class="basket-plus-minus" onclick="addAmount(${dishObject.id})">&#43</td>
                                             <td id="basket-sum${dishObject.id}">${price} €</td>
                                             <td id="basket-trashcan${dishObject.id}">
                                                 <div id="trash-container${dishObject.id}" class="trash-img-container">

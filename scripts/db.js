@@ -6,6 +6,7 @@ let myDishes = [
         "description": "Leckere Pasta mit Speck und Parmesan.",
         "category": "mainDish",
         "amount": 0,
+        "orderSum": 0,
     },
     {
         "id": 1,
@@ -14,6 +15,7 @@ let myDishes = [
         "description": "Herzhafte Lasagne mit Schichten aus Gemüse.",
         "category": "mainDish",
         "amount": 0,
+        "orderSum": 0,
     },
     {
         "id": 2,
@@ -22,6 +24,7 @@ let myDishes = [
         "description": "Der Klassiker für alle, die sich nicht entscheiden können.",
         "category": "mainDish",
         "amount": 0,
+        "orderSum": 0,
     },
     {
         "id": 3,
@@ -30,6 +33,7 @@ let myDishes = [
         "description": "Ein Traum aus abwechselnden Schichten von Löffelbisquit und einer köstlichen Creme.",
         "category": "dessert",
         "amount": 0,
+        "orderSum": 0,
     },
     {
         "id": 4,
@@ -38,6 +42,7 @@ let myDishes = [
         "description": "Ein Seelenschmeichler aus aufgekochter Sahne, der die Sinne verführt.",
         "category": "dessert",
         "amount": 0,
+        "orderSum": 0,
     },
     {
         "id": 5,
@@ -46,6 +51,7 @@ let myDishes = [
         "description": "Der Nachtisch wie von Omi. In Erinnerungen schwelgen und einfach genießen.",
         "category": "dessert",
         "amount": 0,
+        "orderSum": 0,
     },
 ];
 
