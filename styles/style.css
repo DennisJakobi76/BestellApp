@@ -174,3 +174,9 @@ main {
 #dessert-section {
     padding: 16px;
 }
+
+@media (max-width: 470px) {
+    #small-aot-img {
+        width: 70px;
+    }
+}
