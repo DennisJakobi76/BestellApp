@@ -2,6 +2,9 @@ const mainDishSection = document.getElementById("main-dish-section");
 const dessertSection = document.getElementById("dessert-section");
 const basketOrderSection = document.getElementById("basket-order-section");
 const basketBillSection = document.getElementById("basket-bill-section");
+const mobileBasketContainer = document.getElementById("mobile-basket-container");
+const mobileBasketOrderSection = document.getElementById("mobile-basket-order-section");
+const mobileBasketBillSection = document.getElementById("mobile-basket-bill-section");
 
 let allDishes = [];
 let orders = [];
@@ -16,7 +19,8 @@ function init() {
         orders = JSON.parse(saveOrdersInStorage);
 
         getDishObjects(allDishes);
-        renderBasket(orders);
+        renderBasket(orders, basketOrderSection);
+        renderBasket(orders, mobileBasketOrderSection);
     } else {
         getDishObjects(allDishes);
     }
@@ -49,7 +53,8 @@ function addToBasket(dishObjectId) {
         currentObj.amount = dishWithId.amount;
     }
 
-    renderBasket(orders);
+    renderBasket(orders, basketOrderSection);
+    renderBasket(orders, mobileBasketOrderSection);
 
     saveToLocalStorage();
 }
@@ -60,25 +65,36 @@ function checkShowBillSection(array, element) {
     } else if (array.length > 0) {
         element.classList.remove("d_none");
         element.innerHTML = renderBillSection();
-        let basketSumField = document.getElementById("basket-sum-value");
-        let basketTotalField = document.getElementById("basket-total-value");
+
+        let basketSumValues = document.getElementsByClassName("basket-sum-value");
+        let basketTotalValues = document.getElementsByClassName("basket-total-value");
+
         let sum = calculateBill(orders);
-        basketSumField.innerHTML = `${sum.toFixed(2).replace(".", ",")} €`;
+        let sumText = `${sum.toFixed(2).replace(".", ",")} €`;
         let total = calculateTotal(sum, 5);
-        basketTotalField.innerHTML = `${total.toFixed(2).replace(".", ",")} €`;
+        let totalText = `${total.toFixed(2).replace(".", ",")} €`;
+        writeToElementsOfArray(basketSumValues, sumText);
+        writeToElementsOfArray(basketTotalValues, totalText);
     }
 }
 
-function renderBasket(array) {
-    basketOrderSection.innerHTML = "";
+function writeToElementsOfArray(array, text) {
+    for (i = 0; i < array.length; i++) {
+        array[i].innerHTML = text;
+    }
+}
+
+function renderBasket(array, element) {
+    element.innerHTML = "";
 
     if (array.length > 0) {
         for (i = 0; i < array.length; i++) {
-            basketOrderSection.innerHTML += renderBasketDishObject(array[i]);
+            element.innerHTML += renderBasketDishObject(array[i]);
         }
     }
 
     checkShowBillSection(orders, basketBillSection);
+    checkShowBillSection(orders, mobileBasketBillSection);
 }
 
 function calculateBill(array) {
@@ -132,7 +148,8 @@ function deleteFromBasket(dishObjectId) {
         orders.splice(indexOfDishObjectInOrders, 1);
     }
 
-    renderBasket(orders);
+    renderBasket(orders, basketOrderSection);
+    renderBasket(orders, mobileBasketOrderSection);
 
     saveToLocalStorage();
 }
@@ -145,11 +162,25 @@ function subAmount(dishObjectId) {
         deleteFromBasket(dishObjectId);
     }
 
-    renderBasket(orders);
+    renderBasket(orders, basketOrderSection);
+    renderBasket(orders, mobileBasketOrderSection);
 
     saveToLocalStorage();
 }
 
 function addAmount(dishObjectId) {
     addToBasket(dishObjectId);
+}
+
+function toggleDisplayNone(element) {
+    element.classList.toggle("d_none");
+}
+
+function showMobileBasket() {
+    toggleDisplayNone(mobileBasketContainer);
+    window.scrollTo(0, 0);
+}
+
+function closeMobileBasket() {
+    toggleDisplayNone(mobileBasketContainer);
 }

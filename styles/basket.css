@@ -86,3 +86,35 @@
     font-weight: bold;
     margin-top: 8px;
 }
+
+#mobile-basket-section {
+    padding: 16px;
+}
+
+#mobile-basket-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white-text);
+    padding: 16px;
+}
+
+#mobile-basket-bill-section {
+    border-top: 2px solid var(--border-color);
+}
+
+@media (max-width: 770px) {
+    #basket-wrapper {
+        display: none;
+    }
+
+    #content {
+        width: 100% !important;
+    }
+
+    #show-mobile-basket-btn {
+        display: block;
+    }
+}

@@ -60,7 +60,7 @@ function renderBillSection() {
                                 <div
                                     class="sum-value"
                                 >
-                                    <span id="basket-sum-value"></span>
+                                    <span class="basket-sum-value"></span>
                                 </div>
                             </div>
                             <div class="delivery-container">
@@ -76,7 +76,7 @@ function renderBillSection() {
                                 <div
                                     class="total-value"
                                 >
-                                    <span id="basket-total-value"></span>
+                                    <span class="basket-total-value"></span>
                                 </div>
                             </div>`;
 }
