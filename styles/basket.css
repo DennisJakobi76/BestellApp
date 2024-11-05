@@ -18,6 +18,11 @@
     padding-bottom: 16px;
 }
 
+#basket-order-section {
+    max-height: 660px;
+    overflow-y: auto;
+}
+
 .basket-dish-object-container {
     display: flex;
     flex-direction: column;
@@ -92,13 +97,20 @@
 }
 
 #mobile-basket-container {
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: var(--white-text);
     padding: 16px;
+    overflow: hidden !important;
+}
+
+#mobile-basket-order-section {
+    max-height: 660px;
+    overflow-y: auto;
 }
 
 #mobile-basket-bill-section {

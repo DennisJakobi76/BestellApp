@@ -6,6 +6,7 @@ const basketBillSection = document.getElementById("basket-bill-section");
 const mobileBasketContainer = document.getElementById("mobile-basket-container");
 const mobileBasketOrderSection = document.getElementById("mobile-basket-order-section");
 const mobileBasketBillSection = document.getElementById("mobile-basket-bill-section");
+const html = document.getElementById("html");
 
 let allDishes = [];
 let orders = [];
@@ -182,10 +183,12 @@ function toggleDisplayNone(element) {
 function showMobileBasket() {
     toggleDisplayNone(mobileBasketContainer);
     window.scrollTo(0, 0);
+    html.classList.add("overflow-hidden");
 }
 
 function closeMobileBasket() {
     toggleDisplayNone(mobileBasketContainer);
+    html.classList.remove("overflow-hidden");
 }
 
 function clearBasket() {

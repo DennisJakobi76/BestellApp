@@ -2,6 +2,10 @@ a:hover {
     cursor: pointer;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -194,9 +198,6 @@ main {
         justify-content: flex-start;
         height: 400px;
         width: 400px;
-    }
-    & button {
-        margin-top: 80px;
     }
 }
 
