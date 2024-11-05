@@ -53,6 +53,33 @@ let myDishes = [
         "amount": 0,
         "orderSum": 0,
     },
+    {
+        "id": 6,
+        "name": "Mineralwasser",
+        "price": 1.8,
+        "description": "Mit und ohne Kohlensäure erhältlich.",
+        "category": "beverage",
+        "amount": 0,
+        "orderSum": 0,
+    },
+    {
+        "id": 7,
+        "name": "Kaffee",
+        "price": 1.75,
+        "description": "Mit und ohne Koffeein erhältlich.",
+        "category": "beverage",
+        "amount": 0,
+        "orderSum": 0,
+    },
+    {
+        "id": 8,
+        "name": "Cola",
+        "price": 2.3,
+        "description": "Mit und ohne Zucker erhältlich.",
+        "category": "beverage",
+        "amount": 0,
+        "orderSum": 0,
+    },
 ];
 
 function getArrayOfDishObjects(array) {

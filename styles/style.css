@@ -97,6 +97,7 @@ main {
     padding-left: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
+    width: 100%;
 
     & h3 {
         color: var(--category-text);
@@ -175,8 +176,36 @@ main {
     padding: 16px;
 }
 
+#beverage-section {
+    padding: 16px;
+}
+
+#dialog-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+
+    & button {
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 470px) {
     #small-aot-img {
         width: 70px;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu-headline {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 355px) {
+    .menu-headline {
+        font-size: 14px;
     }
 }

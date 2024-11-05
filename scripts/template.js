@@ -78,5 +78,16 @@ function renderBillSection() {
                                 >
                                     <span class="basket-total-value"></span>
                                 </div>
-                            </div>`;
+                                
+            </div>
+            <div>
+                                    <button
+                                            id="show-mobile-basket-btn"
+                                            class="btn"
+                                            onclick="orderDishes()"
+                                    >
+                                        Bestellen
+                                    </button>
+                                </div>
+                                </div>`;
 }

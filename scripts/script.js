@@ -1,5 +1,6 @@
 const mainDishSection = document.getElementById("main-dish-section");
 const dessertSection = document.getElementById("dessert-section");
+const beverageSection = document.getElementById("beverage-section");
 const basketOrderSection = document.getElementById("basket-order-section");
 const basketBillSection = document.getElementById("basket-bill-section");
 const mobileBasketContainer = document.getElementById("mobile-basket-container");
@@ -36,6 +37,8 @@ function getDishObjects(array) {
             mainDishSection.innerHTML += renderDishObject(oneDishObject);
         } else if (oneDishObject.category == "dessert") {
             dessertSection.innerHTML += renderDishObject(oneDishObject);
+        } else if (oneDishObject.category == "beverage") {
+            beverageSection.innerHTML += renderDishObject(oneDishObject);
         }
     }
 }
@@ -183,4 +186,20 @@ function showMobileBasket() {
 
 function closeMobileBasket() {
     toggleDisplayNone(mobileBasketContainer);
+}
+
+function clearBasket() {
+    orders = [];
+    renderBasket(orders, basketOrderSection);
+    renderBasket(orders, mobileBasketOrderSection);
+}
+
+function orderDishes() {
+    window.location.href = "../assets/pages/ordered.html";
+    clearBasket();
+    localStorage.clear();
+}
+
+function closeDialog() {
+    window.location.href = "../../index.html";
 }

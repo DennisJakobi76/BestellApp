@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="shortcut icon"
+            href="../icons/Favicon/favicon-32x32.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="../../styles/standard.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../styles/fonts.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../styles/color.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../styles/assets.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../styles/basket.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../../styles/style.css"
+        />
+        <script
+            src="../../scripts/db.js"
+            defer
+        ></script>
+        <script
+            src="../../scripts/template.js"
+            defer
+        ></script>
+        <script
+            src="../../scripts/script.js"
+            defer
+        ></script>
+        <title>Bestell-App</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-and-footer-img-container">
+                <img
+                    id="top"
+                    src="../icons/Logo/Logo.png"
+                    alt="Bestell-App-Logo"
+                    class="header-and-footer-img"
+                />
+            </div>
+            <div class="header-menu-button-container">
+                <div id="btn-bar1"></div>
+                <div id="btn-bar2"></div>
+                <div id="btn-bar3"></div>
+            </div>
+        </header>
+        <main id="dialog-main">
+            <div class="dialog-container">
+                <h1 id="confirm-order-headline">Sie haben eine Test-Bestellung aufgegeben.</h1>
+                <button
+                    id="close-dialog-btn"
+                    class="btn"
+                    onclick="closeDialog()"
+                >
+                    Zurück zur Startseite
+                </button>
+            </div>
+        </main>
+        <footer>
+            <div class="header-and-footer-img-container">
+                <a href="#top"
+                    ><img
+                        src="../icons/Logo/Logo.png"
+                        alt="Bestell-App-Logo"
+                        class="header-and-footer-img"
+                /></a>
+            </div>
+        </footer>
+    </body>
+</html>
