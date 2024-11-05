@@ -13,3 +13,7 @@ body {
 a {
     text-decoration: none;
 }
+
+.d_none {
+    display: none;
+}

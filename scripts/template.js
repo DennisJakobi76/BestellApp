@@ -33,7 +33,7 @@ function renderBasketDishObject(dishObject) {
                                 <div class="basket-dish-order-container">
                                     <table class="basket-dish-order-table">
                                         <tr id="basket-tr${dishObject.id}">
-                                            <td id="basket-minus${dishObject.id}" class="basket-plus-minus high-minus" onclick="subAmount(dishObject)">&#45</td>
+                                            <td id="basket-minus${dishObject.id}" class="basket-plus-minus high-minus" onclick="subAmount(${dishObject.id})">&#45</td>
                                             <td id="basket-amount${dishObject.id}">${dishObject.amount}x</td>
                                             <td id="basket-plus${dishObject.id}" class="basket-plus-minus" onclick="addAmount(${dishObject.id})">&#43</td>
                                             <td id="basket-sum${dishObject.id}">${price} €</td>
@@ -43,7 +43,7 @@ function renderBasketDishObject(dishObject) {
                                                         id="basket-trash-img${dishObject.id}" 
                                                         src="./assets/icons/trashcan.png" 
                                                         alt="Mülltonnen-Symbol" 
-                                                        onclick="deleteFromBasket(dishObject)"/>
+                                                        onclick="deleteFromBasket(${dishObject.id})"/>
                                                 </div>
                                             </td>
                                         </tr>
@@ -52,4 +52,31 @@ function renderBasketDishObject(dishObject) {
                             </div>`;
     }
     return retValue;
+}
+
+function renderBillSection() {
+    return `<div class="sum-container">
+                                <div class="sum-text"><span>Zwischensumme</span></div>
+                                <div
+                                    class="sum-value"
+                                >
+                                    <span id="basket-sum-value"></span>
+                                </div>
+                            </div>
+                            <div class="delivery-container">
+                                <div class="delivery-text"><span>Lieferkosten</span></div>
+                                <div 
+                                    class="delivery-value"
+                                >
+                                    <span id="basket-delivery-value">5,00 €</span>
+                                </div>
+                            </div>
+                            <div class="total-container">
+                                <div class="total-text"><span>Gesamt</span></div>
+                                <div
+                                    class="total-value"
+                                >
+                                    <span id="basket-total-value"></span>
+                                </div>
+                            </div>`;
 }
