@@ -195,7 +195,7 @@ function clearBasket() {
 }
 
 function orderDishes() {
-    window.location.href = "../assets/pages/ordered.html";
+    window.location.href = "./assets/pages/ordered.html";
     clearBasket();
     localStorage.clear();
 }
