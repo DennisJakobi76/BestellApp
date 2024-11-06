@@ -97,7 +97,6 @@
 }
 
 #mobile-basket-container {
-    /* position: absolute; */
     position: fixed;
     top: 0;
     left: 0;
@@ -105,16 +104,16 @@
     bottom: 0;
     background-color: var(--white-text);
     padding: 16px;
-    overflow: hidden !important;
 }
 
 #mobile-basket-order-section {
-    max-height: 660px;
+    max-height: 300px;
     overflow-y: auto;
 }
 
 #mobile-basket-bill-section {
     border-top: 2px solid var(--border-color);
+    max-height: 100px;
 }
 
 @media (max-width: 770px) {
